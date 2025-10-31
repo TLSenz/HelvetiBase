@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Databases</title>
+    <link rel="stylesheet" href="../css/output.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="bg-white text-gray-900">
+<header class="border-b border-blue-100 bg-white/90 sticky top-0 z-10">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2 font-bold text-xl text-blue-700">
+            <img src="../images/cloud-icon-simple-blue-cloud-icon-25dHTzU8_t.jpg" alt="Logo" class="h-8 w-8 rounded border border-blue-200" />
+            HelvetiBase
+        </a>
+        <ul class="flex items-center gap-6 text-sm font-medium">
+            <li><a class="text-blue-600 hover:text-blue-800" href="index.html">Home</a></li>
+            <li><a class="text-blue-600 hover:text-blue-800" href="about.html">About</a></li>
+            <li><a class="text-blue-600 hover:text-blue-800" href="pricing.html">Pricing</a></li>
+            <li><a class="text-blue-600 hover:text-blue-800" href="aboutDb.html">Databases</a></li>
+            <li>
+                <a class="inline-flex items-center rounded-md bg-blue-600 text-white px-3 py-1.5 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" href="configuration.html">Create Databases</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-5xl font-bold text-blue-900 mb-8">Explore Popular Databases</h1>
+
+    <div id="db-slideshow" class="relative max-w-2xl mx-auto">
+        <!-- Slides -->
+        <div class="slide block">
+            <div class="p-4 border border-blue-100 rounded-md bg-white shadow-sm">
+                <h2 class="text-xl font-semibold text-blue-900">PostgreSQL</h2>
+                <p class="text-gray-700 mt-1">PostgreSQL (Postgres) is a powerful, open-source relational database known for standards compliance, strong ACID guarantees, and advanced features like JSONB, window functions, and extensions.</p>
+            </div>
+        </div>
+        <div class="slide hidden">
+            <div class="p-4 border border-blue-100 rounded-md bg-white shadow-sm">
+                <h2 class="text-xl font-semibold text-blue-900">MySQL</h2>
+                <p class="text-gray-700 mt-1">MySQL is a popular open-source relational database favored for web applications, offering good performance, replication, and a large ecosystem of tools and hosting options.</p>
+            </div>
+        </div>
+        <div class="slide hidden">
+            <div class="p-4 border border-blue-100 rounded-md bg-white shadow-sm">
+                <h2 class="text-xl font-semibold text-blue-900">MongoDB</h2>
+                <p class="text-gray-700 mt-1">MongoDB is a document-oriented NoSQL database that stores data in flexible JSON-like documents, ideal for rapidly evolving schemas and high developer velocity.</p>
+            </div>
+        </div>
+
+        <!-- Prev/Next controls -->
+        <button id="prevBtn" aria-label="Previous" class="absolute top-1/2 -translate-y-1/2 left-0 bg-white border border-blue-200 rounded px-2 py-1 hover:bg-blue-50">❮</button>
+        <button id="nextBtn" aria-label="Next" class="absolute top-1/2 -translate-y-1/2 right-0 bg-white border border-blue-200 rounded px-2 py-1 hover:bg-blue-50">❯</button>
+
+        <!-- Dots -->
+        <div id="dots" class="text-center mt-2">
+            <span class="dot inline-block h-2.5 w-2.5 mx-1 bg-gray-300 rounded-full cursor-pointer"></span>
+            <span class="dot inline-block h-2.5 w-2.5 mx-1 bg-gray-300 rounded-full cursor-pointer"></span>
+            <span class="dot inline-block h-2.5 w-2.5 mx-1 bg-gray-300 rounded-full cursor-pointer"></span>
+        </div>
+    </div>
+</main>
+
+<script>
+(function() {
+  var container = document.getElementById('db-slideshow');
+  if (!container) return;
+
+  var slides = container.getElementsByClassName('slide');
+  var dots = container.getElementsByClassName('dot');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var index = 0;
+  var timerId = null;
+
+  function showSlide(i) {
+    index = (i + slides.length) % slides.length;
+    for (var s = 0; s < slides.length; s++) {
+      slides[s].classList.toggle('hidden', s !== index);
+      slides[s].classList.toggle('block', s === index);
+    }
+    for (var d = 0; d < dots.length; d++) {
+      dots[d].style.backgroundColor = (d === index) ? '#475569' : '#d1d5db';
+    }
+  }
+
+  function next() { showSlide(index + 1); }
+  function prev() { showSlide(index - 1); }
+
+  if (nextBtn) nextBtn.addEventListener('click', function(){ next(); resetAuto(); });
+  if (prevBtn) prevBtn.addEventListener('click', function(){ prev(); resetAuto(); });
+  for (var d = 0; d < dots.length; d++) {
+    (function(pos){
+      dots[pos].addEventListener('click', function(){ showSlide(pos); resetAuto(); });
+    })(d);
+  }
+
+  function startAuto() { timerId = setInterval(function(){ next(); }, 5000); }
+  function resetAuto() { if (timerId) clearInterval(timerId); startAuto(); }
+
+  showSlide(0);
+  startAuto();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Configuration</title>
+    <link rel="stylesheet" href="../css/output.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="bg-white text-gray-900">
+<header class="border-b border-blue-100 bg-white/90 sticky top-0 z-10">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2 font-bold text-xl text-blue-700">
+            <span class="inline-block h-8 w-8 rounded bg-blue-600/10 border border-blue-200"></span>
+            HelvetiBase
+        </a>
+        <ul class="flex items-center gap-6 text-sm font-medium">
+            <li><a class="text-blue-600 hover:text-blue-800" href="index.html">Home</a></li>
+            <li><a class="text-blue-600 hover:text-blue-800" href="about.html">About</a></li>
+            <li><a class="text-blue-600 hover:text-blue-800" href="pricing.html">Pricing</a></li>
+            <li><a class="text-blue-600 hover:text-blue-800" href="aboutDb.html">Databases</a></li>
+            <li>
+                <a class="inline-flex items-center rounded-md bg-blue-600 text-white px-3 py-1.5 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" href="configuration.html">Create Databases</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-5xl font-bold text-blue-900">Database configuration</h1>
+
+    <form class="mt-8 space-y-6">
+        <div>
+            <label for="dbType" class="block text-sm font-medium text-blue-900">Select Database Type</label>
+            <select id="dbType" class="mt-1 w-full rounded-md border border-blue-200 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                <option>MongoDB</option>
+                <option>Oracle DB</option>
+                <option>MySQL</option>
+                <option>PostgreSQL</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="instanceSize" class="block text-sm font-medium text-blue-900">Instance size</label>
+            <div class="flex items-center gap-3 mt-1 text-sm text-gray-600">
+                <small>Small</small>
+                <input type="range" id="instanceSize" name="instanceSize" min="1" max="3" step="1" value="2" class="w-full accent-blue-600"/>
+                <small>Large</small>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+            <div>
+                <label for="username" class="block text-sm font-medium text-blue-900">Username</label>
+                <input id="username" type="text" class="mt-1 w-full rounded-md border border-blue-200 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"/>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-blue-900">Password</label>
+                <input id="password" type="password" class="mt-1 w-full rounded-md border border-blue-200 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"/>
+            </div>
+        </div>
+
+        <button type="submit" class="inline-flex items-center rounded-md bg-blue-600 text-white px-5 py-2.5 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">Create Database</button>
+    </form>
+</main>
+</body>
+</html>
