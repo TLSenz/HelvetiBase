@@ -25,51 +25,170 @@
   </nav>
 </header>
 <main class="max-w-7xl mx-auto px-4 py-12">
-    <h1 class="text-5xl font-bold text-blue-900">About HelvetiBase</h1>
-    <p>
-        HelvetiBase was born in the heart of Switzerland, where precision engineering meets breathtaking landscapes.
-        Our founders, a small team of database engineers from Zürich and Lausanne, shared a simple conviction:
-        deploying databases should be as effortless, reliable, and elegant as a Swiss railway timetable.
-    </p>
-    <p>
-        We set out to remove the friction from database deployment—no more brittle scripts, snowflake servers,
-        or nights lost to manual failovers. With HelvetiBase, you define intent, and we handle the rest:
-        provisioning, clustering, high availability, backups, security hardening, and observability—all automated,
-        audit-ready, and reproducible.
-    </p>
-    <p>
-        Built on a foundation of strong cryptography and cloud-agnostic architecture, our platform lets teams
-        spin up production-grade PostgreSQL, MySQL, and distributed data stores in minutes, across regions and clouds,
-        with consistent guardrails. Scale elastically when traffic surges, roll back safely when needed, and ship
-        with confidence—without becoming an infrastructure expert.
-    </p>
-    <p>
-        Switzerland taught us to value trust, resilience, and craftsmanship. We bring those values to every
-        deployment pipeline we design. Whether you are a startup launching your first product or an enterprise
-        modernizing legacy systems, HelvetiBase makes database deployment predictable, secure, and delightfully simple.
-    </p>
-    <section class="mt-10">
-        <h2 class="text-2xl font-semibold text-blue-900">Our Mission</h2>
-        <p>
-            To revolutionize database deployment by turning complex operations into intuitive, automated workflows
-            that anyone can operate with confidence.
-        </p>
+    <div class="max-w-4xl">
+        <h1 class="text-5xl font-bold text-blue-900 mb-6">About HelvetiBase</h1>
+        <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 leading-relaxed mb-4">
+                HelvetiBase was born in the heart of Switzerland, where precision engineering meets breathtaking landscapes.
+                Our founders, a small team of database engineers from Zürich and Lausanne, shared a simple conviction:
+                deploying databases should be as effortless, reliable, and elegant as a Swiss railway timetable.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                We set out to remove the friction from database deployment—no more brittle scripts, snowflake servers,
+                or nights lost to manual failovers. With HelvetiBase, you define intent, and we handle the rest:
+                provisioning, clustering, high availability, backups, security hardening, and observability—all automated,
+                audit-ready, and reproducible.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Built on a foundation of strong cryptography and cloud-agnostic architecture, our platform lets teams
+                spin up production-grade PostgreSQL, MySQL, and distributed data stores in minutes, across regions and clouds,
+                with consistent guardrails. Scale elastically when traffic surges, roll back safely when needed, and ship
+                with confidence—without becoming an infrastructure expert.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-8">
+                Switzerland taught us to value trust, resilience, and craftsmanship. We bring those values to every
+                deployment pipeline we design. Whether you are a startup launching your first product or an enterprise
+                modernizing legacy systems, HelvetiBase makes database deployment predictable, secure, and delightfully simple.
+            </p>
+        </div>
+    </div>
+
+    <section class="mt-12 grid md:grid-cols-2 gap-8">
+        <div class="rounded-lg border border-blue-100 bg-white p-6 shadow-sm">
+            <h2 class="text-2xl font-semibold text-blue-900 mb-4">Our Mission</h2>
+            <p class="text-gray-700 leading-relaxed">
+                To revolutionize database deployment by turning complex operations into intuitive, automated workflows
+                that anyone can operate with confidence. We believe infrastructure should be invisible—powerful, reliable,
+                and completely transparent.
+            </p>
+        </div>
+        <div class="rounded-lg border border-blue-100 bg-white p-6 shadow-sm">
+            <h2 class="text-2xl font-semibold text-blue-900 mb-4">Our Vision</h2>
+            <p class="text-gray-700 leading-relaxed">
+                A world where every developer can deploy production-grade databases with the same ease as pushing code.
+                Where database operations are as predictable and reliable as the Swiss watchmaking tradition.
+            </p>
+        </div>
     </section>
-    <section class="mt-8">
-        <h2 class="text-2xl font-semibold text-blue-900">Our Promise</h2>
-        <ul>
-            <li>Reliability first: automated resilience, backups, and recovery by default.</li>
-            <li>Security by design: encryption, least-privilege access, and transparent compliance.</li>
-            <li>Cloud freedom: run where you want—multi-cloud, hybrid, or on-prem.</li>
-            <li>Developer joy: simple workflows, clear visibility, and zero guesswork.</li>
-        </ul>
+
+    <section class="mt-12">
+        <h2 class="text-3xl font-semibold text-blue-900 mb-6">Our Promise</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="rounded-lg border border-blue-100 bg-white p-5 shadow-sm">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-900">Reliability First</h3>
+                </div>
+                <p class="text-gray-700">Automated resilience, backups, and recovery by default. 99.99% uptime SLA with built-in disaster recovery.</p>
+            </div>
+            <div class="rounded-lg border border-blue-100 bg-white p-5 shadow-sm">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-900">Security by Design</h3>
+                </div>
+                <p class="text-gray-700">Encryption, least-privilege access, and transparent compliance. SOC 2 Type II certified, GDPR ready.</p>
+            </div>
+            <div class="rounded-lg border border-blue-100 bg-white p-5 shadow-sm">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-900">Cloud Freedom</h3>
+                </div>
+                <p class="text-gray-700">Run where you want—multi-cloud, hybrid, or on-prem. No vendor lock-in, complete portability.</p>
+            </div>
+            <div class="rounded-lg border border-blue-100 bg-white p-5 shadow-sm">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-900">Developer Joy</h3>
+                </div>
+                <p class="text-gray-700">Simple workflows, clear visibility, and zero guesswork. Focus on building, not infrastructure management.</p>
+            </div>
+        </div>
     </section>
-    <section class="mt-8">
-        <h2 class="text-2xl font-semibold text-blue-900">Why Switzerland?</h2>
-        <p class="mt-2 text-gray-700">
+
+    <section class="mt-12 bg-blue-50 rounded-lg p-8 md:p-10">
+        <h2 class="text-3xl font-semibold text-blue-900 mb-4">Why Switzerland?</h2>
+        <p class="text-gray-700 leading-relaxed mb-6 max-w-3xl">
             Neutral, precise, and privacy-conscious—Switzerland is the perfect place to build the future of
-            trustworthy infrastructure. It’s in our DNA.
+            trustworthy infrastructure. It's in our DNA. Our commitment to data privacy, security, and reliability
+            reflects the values embedded in Swiss culture: precision, neutrality, and uncompromising quality.
         </p>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white rounded-lg p-5 border border-blue-100">
+                <h3 class="font-semibold text-blue-900 mb-2">Data Privacy</h3>
+                <p class="text-sm text-gray-700">Strong data protection laws and privacy-first approach ensure your data stays secure and private.</p>
+            </div>
+            <div class="bg-white rounded-lg p-5 border border-blue-100">
+                <h3 class="font-semibold text-blue-900 mb-2">Swiss Precision</h3>
+                <p class="text-sm text-gray-700">Every deployment is engineered with the attention to detail that defines Swiss craftsmanship.</p>
+            </div>
+            <div class="bg-white rounded-lg p-5 border border-blue-100">
+                <h3 class="font-semibold text-blue-900 mb-2">Global Neutrality</h3>
+                <p class="text-sm text-gray-700">We operate independently, free from geopolitical influence, ensuring consistent service worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-12">
+        <h2 class="text-3xl font-semibold text-blue-900 mb-6">Our Team</h2>
+        <p class="text-gray-700 mb-8 max-w-3xl">
+            We're a team of engineers, database experts, and infrastructure specialists who believe that deploying
+            databases shouldn't require a PhD. Based in Zürich, with team members across Europe and North America,
+            we're united by our passion for making infrastructure simple, reliable, and accessible.
+        </p>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="rounded-lg border border-blue-100 bg-white p-6 shadow-sm text-center">
+                <div class="h-20 w-20 mx-auto rounded-full bg-blue-100 mb-4 flex items-center justify-center">
+                    <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-blue-900 mb-2">Engineering Excellence</h3>
+                <p class="text-sm text-gray-700">Former engineers from Google, Amazon, and leading database companies with decades of combined experience.</p>
+            </div>
+            <div class="rounded-lg border border-blue-100 bg-white p-6 shadow-sm text-center">
+                <div class="h-20 w-20 mx-auto rounded-full bg-blue-100 mb-4 flex items-center justify-center">
+                    <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-blue-900 mb-2">Security First</h3>
+                <p class="text-sm text-gray-700">Security experts ensuring your data is protected with industry-leading encryption and compliance standards.</p>
+            </div>
+            <div class="rounded-lg border border-blue-100 bg-white p-6 shadow-sm text-center">
+                <div class="h-20 w-20 mx-auto rounded-full bg-blue-100 mb-4 flex items-center justify-center">
+                    <svg class="h-10 w-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-blue-900 mb-2">24/7 Support</h3>
+                <p class="text-sm text-gray-700">Round-the-clock support team ready to help you when you need it most, because infrastructure never sleeps.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8 md:p-10 text-center">
+        <h2 class="text-3xl font-bold text-blue-900 mb-4">Join Our Journey</h2>
+        <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
+            We're building the future of database infrastructure. If you share our passion for simplicity, reliability,
+            and developer experience, we'd love to hear from you.
+        </p>
+        <a href="configuration.html" class="inline-flex items-center rounded-md bg-blue-600 text-white px-6 py-3 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 font-medium">Get Started Today</a>
     </section>
 </main>
 </body>

@@ -25,40 +25,249 @@
     </nav>
 </header>
 <main class="max-w-7xl mx-auto px-4 py-12">
-    <h1 class="text-5xl font-bold text-blue-900 mb-8">Explore Popular Databases</h1>
+    <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-blue-900 mb-4">Explore Popular Databases</h1>
+        <p class="text-gray-700 max-w-3xl mx-auto">Choose from a wide range of production-ready database engines. All databases are fully managed with automated backups, monitoring, and scaling.</p>
+    </div>
 
-    <div id="db-slideshow" class="relative max-w-2xl mx-auto">
-        <!-- Slides -->
-        <div class="slide block">
-            <div class="p-4 border border-blue-100 rounded-md bg-white shadow-sm">
-                <h2 class="text-xl font-semibold text-blue-900">PostgreSQL</h2>
-                <p class="text-gray-700 mt-1">PostgreSQL (Postgres) is a powerful, open-source relational database known for standards compliance, strong ACID guarantees, and advanced features like JSONB, window functions, and extensions.</p>
+    <!-- Database Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <   div class="rounded-lg border border-blue-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-4">
+                <img src="../images/pg_logo.png" alt="PostgreSQL" class="h-10 w-10 object-contain" onerror="this.style.display='none'">
+                <h2 class="text-2xl font-semibold text-blue-900">PostgreSQL</h2>
             </div>
-        </div>
-        <div class="slide hidden">
-            <div class="p-4 border border-blue-100 rounded-md bg-white shadow-sm">
-                <h2 class="text-xl font-semibold text-blue-900">MySQL</h2>
-                <p class="text-gray-700 mt-1">MySQL is a popular open-source relational database favored for web applications, offering good performance, replication, and a large ecosystem of tools and hosting options.</p>
-            </div>
-        </div>
-        <div class="slide hidden">
-            <div class="p-4 border border-blue-100 rounded-md bg-white shadow-sm">
-                <h2 class="text-xl font-semibold text-blue-900">MongoDB</h2>
-                <p class="text-gray-700 mt-1">MongoDB is a document-oriented NoSQL database that stores data in flexible JSON-like documents, ideal for rapidly evolving schemas and high developer velocity.</p>
-            </div>
+            <p class="text-gray-700 mb-4">Powerful, open-source relational database known for standards compliance, strong ACID guarantees, and advanced features.</p>
+            <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center gap-2">
+                    <svg class="h-4 w-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    JSONB support for document storage
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="h-4 w-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Full-text search and extensions
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="h-4 w-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    ACID-compliant transactions
+                </li>
+            </ul>
         </div>
 
-        <!-- Prev/Next controls -->
-        <button id="prevBtn" aria-label="Previous" class="absolute top-1/2 -translate-y-1/2 left-0 bg-white border border-blue-200 rounded px-2 py-1 hover:bg-blue-50">❮</button>
-        <button id="nextBtn" aria-label="Next" class="absolute top-1/2 -translate-y-1/2 right-0 bg-white border border-blue-200 rounded px-2 py-1 hover:bg-blue-50">❯</button>
+        <div class="rounded-lg border border-blue-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-4">
+                <img src="../images/mysql.png" alt="MySQL" class="h-10 w-10 object-contain" onerror="this.style.display='none'">
+                <h2 class="text-2xl font-semibold text-blue-900">MySQL</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Popular open-source relational database favored for web applications, offering excellent performance and replication.</p>
+            <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center gap-2">
+                    <svg class="h-4 w-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Master-slave replication
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="h-4 w-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Large ecosystem of tools
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="h-4 w-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    High-performance queries
+                </li>
+            </ul>
+        </div>
 
-        <!-- Dots -->
-        <div id="dots" class="text-center mt-2">
-            <span class="dot inline-block h-2.5 w-2.5 mx-1 bg-gray-300 rounded-full cursor-pointer"></span>
-            <span class="dot inline-block h-2.5 w-2.5 mx-1 bg-gray-300 rounded-full cursor-pointer"></span>
-            <span class="dot inline-block h-2.5 w-2.5 mx-1 bg-gray-300 rounded-full cursor-pointer"></span>
+        <div class="rounded-lg border border-blue-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-4">
+                <img src="../images/monog.png" alt="MongoDB" class="h-10 w-10 object-contain" onerror="this.style.display='none'">
+                <h2 class="text-2xl font-semibold text-blue-900">MongoDB</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Document-oriented NoSQL database that stores data in flexible JSON-like documents, ideal for evolving schemas.</p>
+            <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center gap-2">
+                    <svg class="h-4 w-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Flexible schema design
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="h-4 w-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Horizontal scaling
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="h-4 w-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Rich query language
+                </li>
+            </ul>
         </div>
     </div>
+
+    <!-- Interactive Slideshow Section -->
+    <section class="mt-12 bg-blue-50 rounded-lg p-8 md:p-12">
+        <h2 class="text-3xl font-semibold text-blue-900 mb-6 text-center">Learn More About Each Database</h2>
+        <div id="db-slideshow" class="relative max-w-4xl mx-auto">
+            <!-- Slides -->
+            <div class="slide block">
+                <div class="p-8 border border-blue-200 rounded-lg bg-white shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="../images/pg_logo.png" alt="PostgreSQL" class="h-12 w-12 object-contain" onerror="this.style.display='none'">
+                        <h2 class="text-3xl font-semibold text-blue-900">PostgreSQL</h2>
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        PostgreSQL (Postgres) is a powerful, open-source relational database known for standards compliance, 
+                        strong ACID guarantees, and advanced features like JSONB, window functions, and extensions. It's the 
+                        go-to choice for applications requiring complex queries, data integrity, and extensibility.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 mt-6">
+                        <div class="bg-blue-50 rounded p-4">
+                            <h3 class="font-semibold text-blue-900 mb-2">Best For</h3>
+                            <p class="text-sm text-gray-700">Complex queries, data analytics, applications requiring strict ACID compliance, and when you need extensibility through custom functions.</p>
+                        </div>
+                        <div class="bg-blue-50 rounded p-4">
+                            <h3 class="font-semibold text-blue-900 mb-2">Key Features</h3>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Full SQL compliance</li>
+                                <li>• Advanced indexing (GIN, GiST)</li>
+                                <li>• JSONB for document storage</li>
+                                <li>• Extensible with custom types</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide hidden">
+                <div class="p-8 border border-blue-200 rounded-lg bg-white shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="../images/mysql.png" alt="MySQL" class="h-12 w-12 object-contain" onerror="this.style.display='none'">
+                        <h2 class="text-3xl font-semibold text-blue-900">MySQL</h2>
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        MySQL is a popular open-source relational database favored for web applications, offering good 
+                        performance, replication, and a large ecosystem of tools and hosting options. It's known for its 
+                        speed, reliability, and ease of use.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 mt-6">
+                        <div class="bg-blue-50 rounded p-4">
+                            <h3 class="font-semibold text-blue-900 mb-2">Best For</h3>
+                            <p class="text-sm text-gray-700">Web applications, content management systems, e-commerce platforms, and when you need a well-supported, widely-adopted database.</p>
+                        </div>
+                        <div class="bg-blue-50 rounded p-4">
+                            <h3 class="font-semibold text-blue-900 mb-2">Key Features</h3>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• High read performance</li>
+                                <li>• Easy replication setup</li>
+                                <li>• Large community support</li>
+                                <li>• Wide hosting compatibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide hidden">
+                <div class="p-8 border border-blue-200 rounded-lg bg-white shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="../images/monog.png" alt="MongoDB" class="h-12 w-12 object-contain" onerror="this.style.display='none'">
+                        <h2 class="text-3xl font-semibold text-blue-900">MongoDB</h2>
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        MongoDB is a document-oriented NoSQL database that stores data in flexible JSON-like documents, 
+                        ideal for rapidly evolving schemas and high developer velocity. It excels at handling unstructured 
+                        or semi-structured data and scales horizontally with ease.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 mt-6">
+                        <div class="bg-blue-50 rounded p-4">
+                            <h3 class="font-semibold text-blue-900 mb-2">Best For</h3>
+                            <p class="text-sm text-gray-700">Content management, real-time analytics, mobile apps, IoT applications, and when you need flexible schema evolution.</p>
+                        </div>
+                        <div class="bg-blue-50 rounded p-4">
+                            <h3 class="font-semibold text-blue-900 mb-2">Key Features</h3>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Schema-less design</li>
+                                <li>• Horizontal sharding</li>
+                                <li>• Rich query language</li>
+                                <li>• Built-in replication</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prev/Next controls -->
+            <button id="prevBtn" aria-label="Previous" class="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-12 bg-white border border-blue-200 rounded-full px-4 py-2 hover:bg-blue-50 shadow-md transition-colors">❮</button>
+            <button id="nextBtn" aria-label="Next" class="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-12 bg-white border border-blue-200 rounded-full px-4 py-2 hover:bg-blue-50 shadow-md transition-colors">❯</button>
+
+            <!-- Dots -->
+            <div id="dots" class="text-center mt-8">
+                <span class="dot inline-block h-3 w-3 mx-2 bg-gray-300 rounded-full cursor-pointer hover:bg-blue-400 transition-colors"></span>
+                <span class="dot inline-block h-3 w-3 mx-2 bg-gray-300 rounded-full cursor-pointer hover:bg-blue-400 transition-colors"></span>
+                <span class="dot inline-block h-3 w-3 mx-2 bg-gray-300 rounded-full cursor-pointer hover:bg-blue-400 transition-colors"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="mt-12">
+        <h2 class="text-3xl font-semibold text-blue-900 mb-6 text-center">Database Comparison</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse bg-white rounded-lg shadow-sm">
+                <thead>
+                    <tr class="bg-blue-50">
+                        <th class="border border-blue-200 px-4 py-3 text-left font-semibold text-blue-900">Feature</th>
+                        <th class="border border-blue-200 px-4 py-3 text-center font-semibold text-blue-900">PostgreSQL</th>
+                        <th class="border border-blue-200 px-4 py-3 text-center font-semibold text-blue-900">MySQL</th>
+                        <th class="border border-blue-200 px-4 py-3 text-center font-semibold text-blue-900">MongoDB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-blue-200 px-4 py-3 font-medium text-gray-900">Type</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Relational</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Relational</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">NoSQL</td>
+                    </tr>
+                    <tr class="bg-blue-50/50">
+                        <td class="border border-blue-200 px-4 py-3 font-medium text-gray-900">Schema</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Fixed</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Fixed</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Flexible</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-blue-200 px-4 py-3 font-medium text-gray-900">Best For</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Complex queries</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Web apps</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Rapid development</td>
+                    </tr>
+                    <tr class="bg-blue-50/50">
+                        <td class="border border-blue-200 px-4 py-3 font-medium text-gray-900">Scalability</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Vertical + Read replicas</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Vertical + Replication</td>
+                        <td class="border border-blue-200 px-4 py-3 text-center text-gray-700">Horizontal</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="mt-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8 md:p-10 text-center">
+        <h2 class="text-3xl font-bold text-blue-900 mb-4">Ready to Deploy?</h2>
+        <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Get started with any of these databases in minutes. Choose your preferred database and we'll handle the rest.</p>
+        <a href="configuration.html" class="inline-flex items-center rounded-md bg-blue-600 text-white px-6 py-3 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 font-medium">Create Database</a>
+    </section>
 </main>
 
 <script>
